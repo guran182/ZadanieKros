@@ -113,6 +113,10 @@
             this.projekt_divizia = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tabOddelenia = new System.Windows.Forms.TabPage();
             this.oddelenie_zamestnanci_pekneDataGridView = new System.Windows.Forms.DataGridView();
+            this.oddelenieOsCisloZamestnanca = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.oddeleniePriezvisko = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.oddelenieidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zamestnanecidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oddelenie_zamestnanci_pekneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.oddelenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.oddelenieBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -143,7 +147,6 @@
             this.oddelenie_zamestnanci_pekneTableAdapter = new Kros.krosDBDataSetTableAdapters.oddelenie_zamestnanci_pekneTableAdapter();
             this.ulozitZmeny = new System.Windows.Forms.Button();
             this.zrusitZmeny = new System.Windows.Forms.Button();
-            this.oddeleniePriezvisko = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Taby.SuspendLayout();
             this.tabZamestnanci.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zamestnanecBindingNavigator)).BeginInit();
@@ -964,7 +967,10 @@
             this.oddelenie_zamestnanci_pekneDataGridView.AutoGenerateColumns = false;
             this.oddelenie_zamestnanci_pekneDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.oddelenie_zamestnanci_pekneDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.oddeleniePriezvisko});
+            this.oddelenieOsCisloZamestnanca,
+            this.oddeleniePriezvisko,
+            this.oddelenieidDataGridViewTextBoxColumn,
+            this.zamestnanecidDataGridViewTextBoxColumn});
             this.oddelenie_zamestnanci_pekneDataGridView.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.oddelenie_zamestnanci_pekneBindingSource, "oddelenie_id", true));
             this.oddelenie_zamestnanci_pekneDataGridView.DataMember = "fk_vymazanie_oddelenia_z_oddelenie_zamestnanci";
             this.oddelenie_zamestnanci_pekneDataGridView.DataSource = this.oddelenieBindingSource;
@@ -972,6 +978,39 @@
             this.oddelenie_zamestnanci_pekneDataGridView.Name = "oddelenie_zamestnanci_pekneDataGridView";
             this.oddelenie_zamestnanci_pekneDataGridView.Size = new System.Drawing.Size(653, 145);
             this.oddelenie_zamestnanci_pekneDataGridView.TabIndex = 2;
+            // 
+            // oddelenieOsCisloZamestnanca
+            // 
+            this.oddelenieOsCisloZamestnanca.DataPropertyName = "zamestnanec_id";
+            this.oddelenieOsCisloZamestnanca.DataSource = this.zamestnanecBindingSource;
+            this.oddelenieOsCisloZamestnanca.DisplayMember = "id";
+            this.oddelenieOsCisloZamestnanca.HeaderText = "Osobné číslo";
+            this.oddelenieOsCisloZamestnanca.Name = "oddelenieOsCisloZamestnanca";
+            this.oddelenieOsCisloZamestnanca.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.oddelenieOsCisloZamestnanca.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.oddelenieOsCisloZamestnanca.ValueMember = "id";
+            // 
+            // oddeleniePriezvisko
+            // 
+            this.oddeleniePriezvisko.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.oddeleniePriezvisko.DataPropertyName = "zamestnanec_id";
+            this.oddeleniePriezvisko.DataSource = this.zamestnanecBindingSource;
+            this.oddeleniePriezvisko.DisplayMember = "priezvisko";
+            this.oddeleniePriezvisko.HeaderText = "Priezvisko";
+            this.oddeleniePriezvisko.Name = "oddeleniePriezvisko";
+            this.oddeleniePriezvisko.ValueMember = "id";
+            // 
+            // oddelenieidDataGridViewTextBoxColumn
+            // 
+            this.oddelenieidDataGridViewTextBoxColumn.DataPropertyName = "oddelenie_id";
+            this.oddelenieidDataGridViewTextBoxColumn.HeaderText = "oddelenie_id";
+            this.oddelenieidDataGridViewTextBoxColumn.Name = "oddelenieidDataGridViewTextBoxColumn";
+            // 
+            // zamestnanecidDataGridViewTextBoxColumn
+            // 
+            this.zamestnanecidDataGridViewTextBoxColumn.DataPropertyName = "zamestnanec_id";
+            this.zamestnanecidDataGridViewTextBoxColumn.HeaderText = "zamestnanec_id";
+            this.zamestnanecidDataGridViewTextBoxColumn.Name = "zamestnanecidDataGridViewTextBoxColumn";
             // 
             // oddelenie_zamestnanci_pekneBindingSource
             // 
@@ -1213,16 +1252,6 @@
             this.zrusitZmeny.UseVisualStyleBackColor = true;
             this.zrusitZmeny.Click += new System.EventHandler(this.zrusitZmeny_Click);
             // 
-            // oddeleniePriezvisko
-            // 
-            this.oddeleniePriezvisko.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.oddeleniePriezvisko.DataPropertyName = "zamestnanec_id";
-            this.oddeleniePriezvisko.DataSource = this.zamestnanecBindingSource;
-            this.oddeleniePriezvisko.DisplayMember = "priezvisko";
-            this.oddeleniePriezvisko.HeaderText = "Priezvisko";
-            this.oddeleniePriezvisko.Name = "oddeleniePriezvisko";
-            this.oddeleniePriezvisko.ValueMember = "id";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1231,6 +1260,7 @@
             this.Controls.Add(this.zrusitZmeny);
             this.Controls.Add(this.ulozitZmeny);
             this.Controls.Add(this.Taby);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(604, 397);
             this.Name = "Form1";
@@ -1396,7 +1426,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.Button ulozitZmeny;
         private System.Windows.Forms.Button zrusitZmeny;
+        private System.Windows.Forms.DataGridViewComboBoxColumn oddelenieOsCisloZamestnanca;
         private System.Windows.Forms.DataGridViewComboBoxColumn oddeleniePriezvisko;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oddelenieidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zamestnanecidDataGridViewTextBoxColumn;
     }
 }
 
