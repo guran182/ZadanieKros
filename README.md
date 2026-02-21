@@ -10,7 +10,8 @@ Okno pozostáva zo Záložiek (Tabs), na ktorých sa nachádzajú DataGridViews.
 Prvú záložku tvoria Zamestnanci, práve z dôvodu, že pre založenie firmy je nevyhnutné mať pre začiatok pridaného aspoň jedného zamestnanca - riaditeľa. Každý zamestnanec je identifikovaný svojim osobným číslom, ktoré je v databázovej tabuľke vedený pod názvom id.
 
 Keď je pridáný prvý zamestnanec - riaditeľ, tak je možné pristúpiť ku založeniu firmy na ďalšej záložke.
-Ako unikátny identifikátor bolo použité IČO, takto je označený aj PRIMARY KEY v databázovej tabuľke. Názov firmy musí byť unikátny. Čo sa týka Firmy, tu zohrala rolu moja nerozhodnosť, že firiem by mohlo byť aj viac. Tak som ponechal BindingNavigator aj s akciami Pridať, Odstrániť. No, treba povedať, že vzťah N firiem a N divízií som nevytvoril. Taktiež by bolo nevyhnutné dorobiť vzťah Master/Detail pre ostatné záložky - teda ktorú firmu používateľ zaklikne pre tú sa vylistujú Divízie, Projekty a Oddelenia.  
+Ako unikátny identifikátor bolo použité IČO, takto je označený aj PRIMARY KEY v databázovej tabuľke. Názov firmy musí byť unikátny. <del>Čo sa týka Firmy, tu zohrala rolu moja nerozhodnosť, že firiem by mohlo byť aj viac. Tak som ponechal BindingNavigator aj s akciami Pridať, Odstrániť. No, treba povedať, že vzťah N firiem a N divízií som nevytvoril. Taktiež by bolo nevyhnutné dorobiť vzťah Master/Detail pre ostatné záložky - teda ktorú firmu používateľ zaklikne pre tú sa vylistujú Divízie, Projekty a Oddelenia. </del>
+Nakoniec som sa teda rozhodol, že firma smie byť len jedna v celom projekte.
 
 Ďalšia záložka - Divízie. Princíp pozostáva stále rovnaký, teda DataGridView s BindingNavigátorom. Vedúci divízie je vyberaný pomocou rolovacieho zoznamu (ComboBoxu). Keďže v slovenských firmách je bežné, že jeden človek robí všetko, tak som neobmedzoval vedúcim koľkých divízií môže byť jeden človek. Každopádne, názov divízie musí byť unikátny. 
 
@@ -30,7 +31,7 @@ Postup:
 
 Akciu uloženia (disketa) niesol iba prvý BindingNavigator v záložke Zamestnanci. Každý nasledujúci pridaný BindingNavigator ju už neobsahoval. Keď som ju chcel pridať ručne aj na ostatné Binding Navigátory, tak som narazil na problém, že som nevedel dohľadať ikonku pre ňu. Prím tu hrá môj perfekcionizmus, chcel som mať jednotný dizajn panelov. Ako najjednoduchšia možnosť sa mi zdala vytvorenie globálnych tlačidiel na spodku okna `Uložiť zmeny`, a `Zrušiť zmeny`.
 
-Predtým som nikdy nepracoval s WinForms, iba s WPF. Prekvapilo ma ako to majú prepracované. Drvivú väčšinu času som len  vyklikával. Môj kód tvorí možno ~20 riadkov C# kódu. Jadro programu tvorí práve databáza, nad ktorou som strávil najviac času.
+Predtým som nikdy nepracoval s WinForms. Prekvapilo ma ako to majú prepracované. Drvivú väčšinu času som len  vyklikával. Môj kód tvorí možno ~20 riadkov C# kódu. Jadro programu tvorí práve databáza, nad ktorou som strávil najviac času.
 
 ### Screenshoty
 
