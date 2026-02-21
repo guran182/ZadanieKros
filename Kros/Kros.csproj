@@ -67,10 +67,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="krosDBDataSet.cs">
-      <DependentUpon>krosDBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="krosDBDataSet.Designer.cs">
+    <Compile Include="krosDBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>krosDBDataSet.xsd</DependentUpon>
@@ -78,6 +75,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="TreeBuilder.cs" />
+    <Compile Include="Validator.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,11 +94,8 @@
     </None>
     <None Include="krosDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>krosDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </None>
-    <None Include="krosDBDataSet.xss">
-      <DependentUpon>krosDBDataSet.xsd</DependentUpon>
+      <LastGenOutput>krosDBDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Kros
@@ -17,32 +11,69 @@ namespace Kros
             InitializeComponent();
         }
 
+        #region Validatory
+        private void Validator_Zamestnanec(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            string errorText = null,
+                   headerText = zamestnanecDataGridView.Columns[e.ColumnIndex].HeaderText;
+
+            errorText = Validator.InvalidateZamestnanec(headerText, e.FormattedValue.ToString());
+
+            if (false == string.IsNullOrEmpty(errorText))
+            {
+                ((DataGridView)sender).Rows[e.RowIndex].ErrorText = errorText;
+                e.Cancel = true;
+            }
+            else
+            {
+                zamestnanecDataGridView.Rows[e.RowIndex].ErrorText = String.Empty;
+            }
+        }
+
+        private void Validator_Firma(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            string errorText = null, 
+                   headerText = firmaDataGridView.Columns[e.ColumnIndex].HeaderText;
+
+            errorText = Validator.InvalidateFirma(headerText, e.FormattedValue.ToString());
+
+            if(false == string.IsNullOrEmpty(errorText))
+            {
+                ((DataGridView)sender).Rows[e.RowIndex].ErrorText = errorText;
+                e.Cancel = true;
+            }
+            else
+            {
+                firmaDataGridView.Rows[e.RowIndex].ErrorText = String.Empty;
+            }
+        }
+
+        private void firmaDataGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            if (krosDBDataSet.firma.Rows.Count >= 1)
+            {
+                MessageBox.Show("Môžete vytvoriť iba jednu firmu.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                firmaDataGridView.CancelEdit();
+            }
+        }
+
+        #endregion Validatory
+
+        #region Globalne akcie formulara
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'krosDBDataSet.oddelenie_zamestnanci_pekne' table. You can move, or remove it, as needed.
             this.oddelenie_zamestnanci_pekneTableAdapter.Fill(this.krosDBDataSet.oddelenie_zamestnanci_pekne);
-            // TODO: This line of code loads data into the 'krosDBDataSet.zamestnanec' table. You can move, or remove it, as needed.
             this.zamestnanecTableAdapter.Fill(this.krosDBDataSet.zamestnanec);
-            // TODO: This line of code loads data into the 'krosDBDataSet.firma' table. You can move, or remove it, as needed.
             this.firmaTableAdapter.Fill(this.krosDBDataSet.firma);
-            // TODO: This line of code loads data into the 'krosDBDataSet.divizia' table. You can move, or remove it, as needed.
             this.diviziaTableAdapter.Fill(this.krosDBDataSet.divizia);
-            // TODO: This line of code loads data into the 'krosDBDataSet.projekt' table. You can move, or remove it, as needed.
             this.projektTableAdapter.Fill(this.krosDBDataSet.projekt);
-            // TODO: This line of code loads data into the 'krosDBDataSet.oddelenie' table. You can move, or remove it, as needed.
             this.oddelenieTableAdapter.Fill(this.krosDBDataSet.oddelenie);
-            // TODO: This line of code loads data into the 'krosDBDataSet.oddelenie_zamestnanci' table. You can move, or remove it, as needed.
             this.oddelenie_zamestnanciTableAdapter.Fill(this.krosDBDataSet.oddelenie_zamestnanci);
-        }
 
-        private void zamestnanecBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
+            this.firmaDataGridView.CellValidating += Validator_Firma;
+            this.zamestnanecDataGridView.CellValidating += Validator_Zamestnanec;
 
-        }
-
-        private void zamestnanecBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            
+            TreeBuilder.Build(treeViewHierachia, krosDBDataSet);
         }
 
         private void ulozitZmeny_Click(object sender, EventArgs e)
@@ -64,7 +95,7 @@ namespace Kros
             oddelenie_zamestnanciTableAdapter.Update(this.krosDBDataSet.oddelenie_zamestnanci);
         }
 
-        private Boolean zrusitZmenyDataSetu()
+        private bool ZrusitZmenyDataSetu()
         {
             var retVal = MessageBox.Show("Naozaj chcete zahodiť všetky zmeny od posledného uloženia?"
                 , "Zahodiť zmeny"
@@ -80,16 +111,20 @@ namespace Kros
             return false;
         }
 
-        private void zrusitZmeny_Click(object sender, EventArgs e)
-        {
-            zrusitZmenyDataSetu();
-        }
+        private void zrusitZmeny_Click(object sender, EventArgs e) 
+            => ZrusitZmenyDataSetu();
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (krosDBDataSet != null && krosDBDataSet.HasChanges())
-                if(false == zrusitZmenyDataSetu())
+                if(false == ZrusitZmenyDataSetu())
                     e.Cancel = true;
         }
+
+        #endregion Akcie formulara
+
+        private void obnovHierarchiu_Click(object sender, EventArgs e)
+            => TreeBuilder.Build(treeViewHierachia, krosDBDataSet);
+
     }
 }

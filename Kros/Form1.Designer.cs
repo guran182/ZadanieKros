@@ -69,10 +69,6 @@
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.firmaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.riaditel = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabDivizie = new System.Windows.Forms.TabPage();
             this.diviziaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem3 = new System.Windows.Forms.ToolStripButton();
@@ -88,10 +84,6 @@
             this.bindingNavigatorMoveLastItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.diviziaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.veduci_divizie = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabProjekty = new System.Windows.Forms.TabPage();
             this.projektyBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem4 = new System.Windows.Forms.ToolStripButton();
@@ -113,10 +105,6 @@
             this.projekt_divizia = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tabOddelenia = new System.Windows.Forms.TabPage();
             this.oddelenie_zamestnanci_pekneDataGridView = new System.Windows.Forms.DataGridView();
-            this.oddelenieOsCisloZamestnanca = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.oddeleniePriezvisko = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.oddelenieidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zamestnanecidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oddelenie_zamestnanci_pekneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.oddelenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.oddelenieBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -132,10 +120,8 @@
             this.bindingNavigatorMoveLastItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.oddelenieDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.veduci_oddelenia = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.projekt_nazov = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabHierarchia = new System.Windows.Forms.TabPage();
+            this.treeViewHierachia = new System.Windows.Forms.TreeView();
             this.zamestnanecTableAdapter = new Kros.krosDBDataSetTableAdapters.zamestnanecTableAdapter();
             this.tableAdapterManager = new Kros.krosDBDataSetTableAdapters.TableAdapterManager();
             this.firmaTableAdapter = new Kros.krosDBDataSetTableAdapters.firmaTableAdapter();
@@ -147,6 +133,22 @@
             this.oddelenie_zamestnanci_pekneTableAdapter = new Kros.krosDBDataSetTableAdapters.oddelenie_zamestnanci_pekneTableAdapter();
             this.ulozitZmeny = new System.Windows.Forms.Button();
             this.zrusitZmeny = new System.Windows.Forms.Button();
+            this.panelBottom = new System.Windows.Forms.Panel();
+            this.tableLayoutPanelOddelenia = new System.Windows.Forms.TableLayoutPanel();
+            this.oddelenieOsCisloZamestnanca = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.oddeleniePriezvisko = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.veduci_oddelenia = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.projekt_nazov = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.veduci_divizie = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.riaditel = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.obnovHierarchiu = new System.Windows.Forms.ToolStripButton();
             this.Taby.SuspendLayout();
             this.tabZamestnanci.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zamestnanecBindingNavigator)).BeginInit();
@@ -176,16 +178,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.oddelenieBindingNavigator)).BeginInit();
             this.oddelenieBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.oddelenieDataGridView)).BeginInit();
+            this.tabHierarchia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.oddelenie_zamestnanciBindingSource)).BeginInit();
+            this.panelBottom.SuspendLayout();
+            this.tableLayoutPanelOddelenia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Taby
             // 
+            this.Taby.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Taby.Controls.Add(this.tabZamestnanci);
             this.Taby.Controls.Add(this.tabFirma);
             this.Taby.Controls.Add(this.tabDivizie);
             this.Taby.Controls.Add(this.tabProjekty);
             this.Taby.Controls.Add(this.tabOddelenia);
+            this.Taby.Controls.Add(this.tabHierarchia);
             this.Taby.Location = new System.Drawing.Point(-2, -1);
             this.Taby.Margin = new System.Windows.Forms.Padding(2);
             this.Taby.Name = "Taby";
@@ -340,10 +351,12 @@
             this.zamestnanecBindingNavigatorSaveItem.Name = "zamestnanecBindingNavigatorSaveItem";
             this.zamestnanecBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.zamestnanecBindingNavigatorSaveItem.Text = "Save Data";
-            this.zamestnanecBindingNavigatorSaveItem.Click += new System.EventHandler(this.zamestnanecBindingNavigatorSaveItem_Click);
             // 
             // zamestnanecDataGridView
             // 
+            this.zamestnanecDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.zamestnanecDataGridView.AutoGenerateColumns = false;
             this.zamestnanecDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.zamestnanecDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -537,13 +550,15 @@
             // 
             // firmaDataGridView
             // 
+            this.firmaDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.firmaDataGridView.AutoGenerateColumns = false;
             this.firmaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.firmaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.riaditel,
-            this.dataGridViewTextBoxColumn9});
+            this.dataGridViewTextBoxColumn9,
+            this.riaditel});
             this.firmaDataGridView.DataSource = this.firmaBindingSource;
             this.firmaDataGridView.Location = new System.Drawing.Point(0, 32);
             this.firmaDataGridView.Margin = new System.Windows.Forms.Padding(2);
@@ -551,36 +566,7 @@
             this.firmaDataGridView.RowTemplate.Height = 24;
             this.firmaDataGridView.Size = new System.Drawing.Size(654, 315);
             this.firmaDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "ico";
-            this.dataGridViewTextBoxColumn7.HeaderText = "IČO";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "riaditel_id";
-            this.dataGridViewTextBoxColumn8.HeaderText = "riaditel_id";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            // 
-            // riaditel
-            // 
-            this.riaditel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.riaditel.DataPropertyName = "riaditel_id";
-            this.riaditel.DataSource = this.zamestnanecBindingSource;
-            this.riaditel.DisplayMember = "priezvisko";
-            this.riaditel.HeaderText = "Riaditeľ";
-            this.riaditel.Name = "riaditel";
-            this.riaditel.ValueMember = "id";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "nazov";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Názov spoločnosti";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.firmaDataGridView.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.firmaDataGridView_UserAddedRow);
             // 
             // tabDivizie
             // 
@@ -717,13 +703,15 @@
             // 
             // diviziaDataGridView
             // 
+            this.diviziaDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.diviziaDataGridView.AutoGenerateColumns = false;
             this.diviziaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.diviziaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.veduci_divizie,
-            this.dataGridViewTextBoxColumn16});
+            this.dataGridViewTextBoxColumn16,
+            this.veduci_divizie});
             this.diviziaDataGridView.DataSource = this.diviziaBindingSource;
             this.diviziaDataGridView.Location = new System.Drawing.Point(0, 32);
             this.diviziaDataGridView.Margin = new System.Windows.Forms.Padding(2);
@@ -731,37 +719,6 @@
             this.diviziaDataGridView.RowTemplate.Height = 24;
             this.diviziaDataGridView.Size = new System.Drawing.Size(654, 315);
             this.diviziaDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Identifikátor";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "veduci_id";
-            this.dataGridViewTextBoxColumn15.HeaderText = "veduci_id";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.Visible = false;
-            // 
-            // veduci_divizie
-            // 
-            this.veduci_divizie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.veduci_divizie.DataPropertyName = "veduci_id";
-            this.veduci_divizie.DataSource = this.zamestnanecBindingSource;
-            this.veduci_divizie.DisplayMember = "priezvisko";
-            this.veduci_divizie.HeaderText = "Vedúci divízie";
-            this.veduci_divizie.Name = "veduci_divizie";
-            this.veduci_divizie.ValueMember = "id";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "nazov";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Názov divízie";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // tabProjekty
             // 
@@ -898,6 +855,9 @@
             // 
             // projektDataGridView
             // 
+            this.projektDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.projektDataGridView.AutoGenerateColumns = false;
             this.projektDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.projektDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -932,7 +892,7 @@
             this.veduci_projektu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.veduci_projektu.DataPropertyName = "veduci_id";
             this.veduci_projektu.DataSource = this.zamestnanecBindingSource;
-            this.veduci_projektu.DisplayMember = "priezvisko";
+            this.veduci_projektu.DisplayMember = "titul_meno_priezvisko";
             this.veduci_projektu.HeaderText = "Vedúci projektu";
             this.veduci_projektu.Name = "veduci_projektu";
             this.veduci_projektu.ValueMember = "id";
@@ -950,9 +910,8 @@
             // tabOddelenia
             // 
             this.tabOddelenia.AutoScroll = true;
-            this.tabOddelenia.Controls.Add(this.oddelenie_zamestnanci_pekneDataGridView);
+            this.tabOddelenia.Controls.Add(this.tableLayoutPanelOddelenia);
             this.tabOddelenia.Controls.Add(this.oddelenieBindingNavigator);
-            this.tabOddelenia.Controls.Add(this.oddelenieDataGridView);
             this.tabOddelenia.Location = new System.Drawing.Point(4, 22);
             this.tabOddelenia.Margin = new System.Windows.Forms.Padding(2);
             this.tabOddelenia.Name = "tabOddelenia";
@@ -964,53 +923,21 @@
             // 
             // oddelenie_zamestnanci_pekneDataGridView
             // 
+            this.oddelenie_zamestnanci_pekneDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.oddelenie_zamestnanci_pekneDataGridView.AutoGenerateColumns = false;
             this.oddelenie_zamestnanci_pekneDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.oddelenie_zamestnanci_pekneDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.oddelenieOsCisloZamestnanca,
-            this.oddeleniePriezvisko,
-            this.oddelenieidDataGridViewTextBoxColumn,
-            this.zamestnanecidDataGridViewTextBoxColumn});
+            this.oddeleniePriezvisko});
             this.oddelenie_zamestnanci_pekneDataGridView.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.oddelenie_zamestnanci_pekneBindingSource, "oddelenie_id", true));
             this.oddelenie_zamestnanci_pekneDataGridView.DataMember = "fk_vymazanie_oddelenia_z_oddelenie_zamestnanci";
             this.oddelenie_zamestnanci_pekneDataGridView.DataSource = this.oddelenieBindingSource;
-            this.oddelenie_zamestnanci_pekneDataGridView.Location = new System.Drawing.Point(1, 205);
+            this.oddelenie_zamestnanci_pekneDataGridView.Location = new System.Drawing.Point(3, 170);
             this.oddelenie_zamestnanci_pekneDataGridView.Name = "oddelenie_zamestnanci_pekneDataGridView";
-            this.oddelenie_zamestnanci_pekneDataGridView.Size = new System.Drawing.Size(653, 145);
+            this.oddelenie_zamestnanci_pekneDataGridView.Size = new System.Drawing.Size(649, 142);
             this.oddelenie_zamestnanci_pekneDataGridView.TabIndex = 2;
-            // 
-            // oddelenieOsCisloZamestnanca
-            // 
-            this.oddelenieOsCisloZamestnanca.DataPropertyName = "zamestnanec_id";
-            this.oddelenieOsCisloZamestnanca.DataSource = this.zamestnanecBindingSource;
-            this.oddelenieOsCisloZamestnanca.DisplayMember = "id";
-            this.oddelenieOsCisloZamestnanca.HeaderText = "Osobné číslo";
-            this.oddelenieOsCisloZamestnanca.Name = "oddelenieOsCisloZamestnanca";
-            this.oddelenieOsCisloZamestnanca.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.oddelenieOsCisloZamestnanca.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.oddelenieOsCisloZamestnanca.ValueMember = "id";
-            // 
-            // oddeleniePriezvisko
-            // 
-            this.oddeleniePriezvisko.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.oddeleniePriezvisko.DataPropertyName = "zamestnanec_id";
-            this.oddeleniePriezvisko.DataSource = this.zamestnanecBindingSource;
-            this.oddeleniePriezvisko.DisplayMember = "priezvisko";
-            this.oddeleniePriezvisko.HeaderText = "Priezvisko";
-            this.oddeleniePriezvisko.Name = "oddeleniePriezvisko";
-            this.oddeleniePriezvisko.ValueMember = "id";
-            // 
-            // oddelenieidDataGridViewTextBoxColumn
-            // 
-            this.oddelenieidDataGridViewTextBoxColumn.DataPropertyName = "oddelenie_id";
-            this.oddelenieidDataGridViewTextBoxColumn.HeaderText = "oddelenie_id";
-            this.oddelenieidDataGridViewTextBoxColumn.Name = "oddelenieidDataGridViewTextBoxColumn";
-            // 
-            // zamestnanecidDataGridViewTextBoxColumn
-            // 
-            this.zamestnanecidDataGridViewTextBoxColumn.DataPropertyName = "zamestnanec_id";
-            this.zamestnanecidDataGridViewTextBoxColumn.HeaderText = "zamestnanec_id";
-            this.zamestnanecidDataGridViewTextBoxColumn.Name = "zamestnanecidDataGridViewTextBoxColumn";
             // 
             // oddelenie_zamestnanci_pekneBindingSource
             // 
@@ -1139,54 +1066,42 @@
             // 
             // oddelenieDataGridView
             // 
+            this.oddelenieDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.oddelenieDataGridView.AutoGenerateColumns = false;
             this.oddelenieDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.oddelenieDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn13,
             this.veduci_oddelenia,
-            this.projekt_nazov,
-            this.dataGridViewTextBoxColumn13});
+            this.projekt_nazov});
             this.oddelenieDataGridView.DataSource = this.oddelenieBindingSource;
-            this.oddelenieDataGridView.Location = new System.Drawing.Point(0, 32);
+            this.oddelenieDataGridView.Location = new System.Drawing.Point(2, 2);
             this.oddelenieDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.oddelenieDataGridView.Name = "oddelenieDataGridView";
             this.oddelenieDataGridView.RowTemplate.Height = 24;
-            this.oddelenieDataGridView.Size = new System.Drawing.Size(654, 158);
+            this.oddelenieDataGridView.Size = new System.Drawing.Size(651, 143);
             this.oddelenieDataGridView.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn10
+            // tabHierarchia
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Identifikátor";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.tabHierarchia.Controls.Add(this.bindingNavigator1);
+            this.tabHierarchia.Controls.Add(this.treeViewHierachia);
+            this.tabHierarchia.Location = new System.Drawing.Point(4, 22);
+            this.tabHierarchia.Name = "tabHierarchia";
+            this.tabHierarchia.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHierarchia.Size = new System.Drawing.Size(656, 350);
+            this.tabHierarchia.TabIndex = 5;
+            this.tabHierarchia.Text = "Hierarchia";
+            this.tabHierarchia.UseVisualStyleBackColor = true;
             // 
-            // veduci_oddelenia
+            // treeViewHierachia
             // 
-            this.veduci_oddelenia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.veduci_oddelenia.DataPropertyName = "veduci_id";
-            this.veduci_oddelenia.DataSource = this.zamestnanecBindingSource;
-            this.veduci_oddelenia.DisplayMember = "priezvisko";
-            this.veduci_oddelenia.HeaderText = "Vedúci oddelenia";
-            this.veduci_oddelenia.Name = "veduci_oddelenia";
-            this.veduci_oddelenia.ValueMember = "id";
-            // 
-            // projekt_nazov
-            // 
-            this.projekt_nazov.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.projekt_nazov.DataPropertyName = "projekt_id";
-            this.projekt_nazov.DataSource = this.projektBindingSource;
-            this.projekt_nazov.DisplayMember = "nazov";
-            this.projekt_nazov.HeaderText = "Projekt";
-            this.projekt_nazov.Name = "projekt_nazov";
-            this.projekt_nazov.ValueMember = "id";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "nazov";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Názov oddelenia";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.treeViewHierachia.Location = new System.Drawing.Point(-4, 28);
+            this.treeViewHierachia.Name = "treeViewHierachia";
+            this.treeViewHierachia.Size = new System.Drawing.Size(657, 319);
+            this.treeViewHierachia.TabIndex = 0;
             // 
             // zamestnanecTableAdapter
             // 
@@ -1234,9 +1149,10 @@
             // 
             // ulozitZmeny
             // 
-            this.ulozitZmeny.Location = new System.Drawing.Point(576, 380);
+            this.ulozitZmeny.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ulozitZmeny.Location = new System.Drawing.Point(577, 8);
             this.ulozitZmeny.Name = "ulozitZmeny";
-            this.ulozitZmeny.Size = new System.Drawing.Size(75, 23);
+            this.ulozitZmeny.Size = new System.Drawing.Size(78, 23);
             this.ulozitZmeny.TabIndex = 1;
             this.ulozitZmeny.Text = "Uložiť zmeny";
             this.ulozitZmeny.UseVisualStyleBackColor = true;
@@ -1244,22 +1160,184 @@
             // 
             // zrusitZmeny
             // 
-            this.zrusitZmeny.Location = new System.Drawing.Point(495, 380);
+            this.zrusitZmeny.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.zrusitZmeny.Location = new System.Drawing.Point(493, 8);
             this.zrusitZmeny.Name = "zrusitZmeny";
-            this.zrusitZmeny.Size = new System.Drawing.Size(75, 23);
+            this.zrusitZmeny.Size = new System.Drawing.Size(78, 23);
             this.zrusitZmeny.TabIndex = 2;
             this.zrusitZmeny.Text = "Zrušiť zmeny";
             this.zrusitZmeny.UseVisualStyleBackColor = true;
             this.zrusitZmeny.Click += new System.EventHandler(this.zrusitZmeny_Click);
+            // 
+            // panelBottom
+            // 
+            this.panelBottom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBottom.Controls.Add(this.ulozitZmeny);
+            this.panelBottom.Controls.Add(this.zrusitZmeny);
+            this.panelBottom.Location = new System.Drawing.Point(2, 373);
+            this.panelBottom.Name = "panelBottom";
+            this.panelBottom.Size = new System.Drawing.Size(660, 38);
+            this.panelBottom.TabIndex = 3;
+            // 
+            // tableLayoutPanelOddelenia
+            // 
+            this.tableLayoutPanelOddelenia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanelOddelenia.ColumnCount = 1;
+            this.tableLayoutPanelOddelenia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelOddelenia.Controls.Add(this.oddelenieDataGridView, 0, 0);
+            this.tableLayoutPanelOddelenia.Controls.Add(this.oddelenie_zamestnanci_pekneDataGridView, 0, 2);
+            this.tableLayoutPanelOddelenia.Location = new System.Drawing.Point(1, 30);
+            this.tableLayoutPanelOddelenia.Name = "tableLayoutPanelOddelenia";
+            this.tableLayoutPanelOddelenia.RowCount = 3;
+            this.tableLayoutPanelOddelenia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelOddelenia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelOddelenia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelOddelenia.Size = new System.Drawing.Size(655, 315);
+            this.tableLayoutPanelOddelenia.TabIndex = 4;
+            // 
+            // oddelenieOsCisloZamestnanca
+            // 
+            this.oddelenieOsCisloZamestnanca.DataPropertyName = "zamestnanec_id";
+            this.oddelenieOsCisloZamestnanca.DataSource = this.zamestnanecBindingSource;
+            this.oddelenieOsCisloZamestnanca.DisplayMember = "id";
+            this.oddelenieOsCisloZamestnanca.HeaderText = "Osobné číslo";
+            this.oddelenieOsCisloZamestnanca.Name = "oddelenieOsCisloZamestnanca";
+            this.oddelenieOsCisloZamestnanca.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.oddelenieOsCisloZamestnanca.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.oddelenieOsCisloZamestnanca.ValueMember = "id";
+            // 
+            // oddeleniePriezvisko
+            // 
+            this.oddeleniePriezvisko.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.oddeleniePriezvisko.DataPropertyName = "zamestnanec_id";
+            this.oddeleniePriezvisko.DataSource = this.zamestnanecBindingSource;
+            this.oddeleniePriezvisko.DisplayMember = "titul_meno_priezvisko";
+            this.oddeleniePriezvisko.HeaderText = "Meno";
+            this.oddeleniePriezvisko.Name = "oddeleniePriezvisko";
+            this.oddeleniePriezvisko.ValueMember = "id";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Identifikátor";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "nazov";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Názov oddelenia";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // veduci_oddelenia
+            // 
+            this.veduci_oddelenia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.veduci_oddelenia.DataPropertyName = "veduci_id";
+            this.veduci_oddelenia.DataSource = this.zamestnanecBindingSource;
+            this.veduci_oddelenia.DisplayMember = "titul_meno_priezvisko";
+            this.veduci_oddelenia.HeaderText = "Vedúci oddelenia";
+            this.veduci_oddelenia.Name = "veduci_oddelenia";
+            this.veduci_oddelenia.ValueMember = "id";
+            // 
+            // projekt_nazov
+            // 
+            this.projekt_nazov.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.projekt_nazov.DataPropertyName = "projekt_id";
+            this.projekt_nazov.DataSource = this.projektBindingSource;
+            this.projekt_nazov.DisplayMember = "nazov";
+            this.projekt_nazov.HeaderText = "Projekt";
+            this.projekt_nazov.Name = "projekt_nazov";
+            this.projekt_nazov.ValueMember = "id";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Identifikátor";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "nazov";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Názov divízie";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // veduci_divizie
+            // 
+            this.veduci_divizie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.veduci_divizie.DataPropertyName = "veduci_id";
+            this.veduci_divizie.DataSource = this.zamestnanecBindingSource;
+            this.veduci_divizie.DisplayMember = "titul_meno_priezvisko";
+            this.veduci_divizie.HeaderText = "Vedúci divízie";
+            this.veduci_divizie.Name = "veduci_divizie";
+            this.veduci_divizie.ValueMember = "id";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "ico";
+            this.dataGridViewTextBoxColumn7.HeaderText = "IČO";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "nazov";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Názov spoločnosti";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // riaditel
+            // 
+            this.riaditel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.riaditel.DataPropertyName = "riaditel_id";
+            this.riaditel.DataSource = this.zamestnanecBindingSource;
+            this.riaditel.DisplayMember = "titul_meno_priezvisko";
+            this.riaditel.HeaderText = "Riaditeľ";
+            this.riaditel.Name = "riaditel";
+            this.riaditel.ValueMember = "id";
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = null;
+            this.bindingNavigator1.CountItem = null;
+            this.bindingNavigator1.DeleteItem = null;
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.obnovHierarchiu});
+            this.bindingNavigator1.Location = new System.Drawing.Point(3, 3);
+            this.bindingNavigator1.MoveFirstItem = null;
+            this.bindingNavigator1.MoveLastItem = null;
+            this.bindingNavigator1.MoveNextItem = null;
+            this.bindingNavigator1.MovePreviousItem = null;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = null;
+            this.bindingNavigator1.Size = new System.Drawing.Size(650, 25);
+            this.bindingNavigator1.TabIndex = 1;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // obnovHierarchiu
+            // 
+            this.obnovHierarchiu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.obnovHierarchiu.Image = ((System.Drawing.Image)(resources.GetObject("obnovHierarchiu.Image")));
+            this.obnovHierarchiu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.obnovHierarchiu.Name = "obnovHierarchiu";
+            this.obnovHierarchiu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.obnovHierarchiu.Size = new System.Drawing.Size(23, 22);
+            this.obnovHierarchiu.Text = "toolStripButton1";
+            this.obnovHierarchiu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.obnovHierarchiu.Click += new System.EventHandler(this.obnovHierarchiu_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 411);
-            this.Controls.Add(this.zrusitZmeny);
-            this.Controls.Add(this.ulozitZmeny);
             this.Controls.Add(this.Taby);
+            this.Controls.Add(this.panelBottom);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(604, 397);
@@ -1306,7 +1384,14 @@
             this.oddelenieBindingNavigator.ResumeLayout(false);
             this.oddelenieBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.oddelenieDataGridView)).EndInit();
+            this.tabHierarchia.ResumeLayout(false);
+            this.tabHierarchia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.oddelenie_zamestnanciBindingSource)).EndInit();
+            this.panelBottom.ResumeLayout(false);
+            this.tableLayoutPanelOddelenia.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1381,14 +1466,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem3;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator11;
         private System.Windows.Forms.DataGridView diviziaDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewComboBoxColumn riaditel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewComboBoxColumn veduci_divizie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.TabPage tabProjekty;
         private System.Windows.Forms.BindingSource projektBindingSource;
         private krosDBDataSetTableAdapters.projektTableAdapter projektTableAdapter;
@@ -1416,20 +1493,30 @@
         private System.Windows.Forms.BindingSource oddelenie_zamestnanci_pekneBindingSource;
         private krosDBDataSetTableAdapters.oddelenie_zamestnanci_pekneTableAdapter oddelenie_zamestnanci_pekneTableAdapter;
         private System.Windows.Forms.DataGridView oddelenie_zamestnanci_pekneDataGridView;
+        private System.Windows.Forms.Button ulozitZmeny;
+        private System.Windows.Forms.Button zrusitZmeny;
+        private System.Windows.Forms.TabPage tabHierarchia;
+        private System.Windows.Forms.TreeView treeViewHierachia;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewComboBoxColumn veduci_projektu;
         private System.Windows.Forms.DataGridViewComboBoxColumn projekt_divizia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewComboBoxColumn veduci_oddelenia;
-        private System.Windows.Forms.DataGridViewComboBoxColumn projekt_nazov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.Button ulozitZmeny;
-        private System.Windows.Forms.Button zrusitZmeny;
+        private System.Windows.Forms.Panel panelBottom;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelOddelenia;
         private System.Windows.Forms.DataGridViewComboBoxColumn oddelenieOsCisloZamestnanca;
         private System.Windows.Forms.DataGridViewComboBoxColumn oddeleniePriezvisko;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oddelenieidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zamestnanecidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewComboBoxColumn veduci_oddelenia;
+        private System.Windows.Forms.DataGridViewComboBoxColumn projekt_nazov;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewComboBoxColumn veduci_divizie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewComboBoxColumn riaditel;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripButton obnovHierarchiu;
     }
 }
 

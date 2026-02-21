@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS zamestnanec;
 
 CREATE TABLE zamestnanec (
   id INT IDENTITY(1, 1) PRIMARY KEY NOT NULL,
-  titul VARCHAR(10) NOT NULL,
+  titul VARCHAR(10),
   meno VARCHAR(255) NOT NULL,
   priezvisko VARCHAR(255) NOT NULL,
   telefon VARCHAR(35),
